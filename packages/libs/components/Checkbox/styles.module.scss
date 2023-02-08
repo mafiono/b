@@ -1,0 +1,37 @@
+@import "../../assets/styles/mixins";
+
+.checkbox {
+  @include flexbox(flex-start, flex-start);
+  color: inherit;
+  width: 100%;
+}
+
+.inner {
+  @include flexbox(center, center);
+
+  min-width: 24px;
+  height: 24px;
+  background: var(--color-checkbox-background);
+  border-radius: 4px;
+  box-shadow: var(--color-checkbox-border) 0 0 0 1px;
+  transition: all $transition-time;
+  overflow: hidden;
+  border: 1px solid transparent;
+
+  .checked & {
+    background-color: var(--color-brand);
+    color: white;
+    border: none;
+  }
+}
+
+.label {
+  flex-grow: 1;
+  margin-left: 16px;
+  text-align: left;
+  min-height: 24px;
+}
+
+.error {
+  border-color: var(--color-error);
+}

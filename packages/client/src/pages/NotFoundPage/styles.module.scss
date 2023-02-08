@@ -1,0 +1,63 @@
+@import 'https://fonts.googleapis.com/css?family=VT323';
+
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  background: #0414a7;
+}
+
+.wrapper * {
+    font-family: VT323, monospace;
+}
+
+.bsod {
+  padding-top: 10%;
+
+  width: 90%;
+  margin: auto;
+  max-width: 640px;
+
+  h3{
+    margin-bottom: 15px;
+  }
+
+  p{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .neg {
+    text-align: center;
+    color: #0414a7
+  }
+
+  .bg {
+    background: #aaa;
+    padding: 0 15px 2px 13px
+  }
+
+  .title {
+    font-size: 2.75rem;
+    margin-bottom: 50px;
+  }
+
+  .nav {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .link {
+    text-decoration: none;
+    padding: 0 9px 2px 8px;
+    font-size: 20px;
+    color: #fff;
+
+    &:hover, &:focus {
+      background: #aaa;
+      color: #0414a7
+    }
+  }
+}

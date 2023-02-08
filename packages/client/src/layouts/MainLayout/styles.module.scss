@@ -1,0 +1,102 @@
+@import "~@betnomi/libs/assets/styles/_variables";
+
+.container {
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-white);
+  transition: all $transition-time;
+  padding-right: 0;
+  padding-left: $menu_width_close;
+  padding-top: $header_height;
+
+  &.chat_active {
+    padding-right: $chat_width;
+  }
+
+  &.menu_active {
+    padding-left: $menu_width;
+  }
+
+  @media(max-width: 768px){
+    padding-left: 0;
+    &.menu_active {
+      padding-left: 0;
+    }
+    &.chat_active {
+      padding-right: 0;
+    }
+
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $header_height;
+  z-index: 100;
+}
+
+.left {
+  position: fixed;
+  left: 0;
+  top: $header_height;
+  height: calc(100vh - #{$header_height});
+  width: $menu_width_close;
+  transition: all $transition-time;
+  z-index: 2;
+  background: var(--color-menu-bg);
+
+  &.active {
+    width: $menu_width;
+  }
+
+  @media(max-width: 768px){
+    z-index: 9999;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateX(-100%);
+
+    &.active {
+      transform: translateX(0);
+      width: 100%;
+    }
+  }
+}
+
+.content {
+  grid-area: content;
+}
+
+.right {
+  position: fixed;
+  right: 0;
+  top: $header_height;
+  height: calc(100vh - #{$header_height});
+  width: 0;
+  transition: all $transition-time;
+  z-index: 3;
+
+  &.active {
+    width: $chat_width;
+  }
+
+  @media(max-width: 768px) {
+    height: calc(100vh - #{$header_height} - 71px);
+    &.active {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  padding: 0 $main_layout_padding;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  @media(max-width: 768px) {
+    padding: 0 15px;
+  }
+}

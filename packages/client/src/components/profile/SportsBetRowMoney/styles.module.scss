@@ -1,0 +1,16 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.money {
+  @include flexbox(center, flex-start);
+
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-white);
+  font-weight: var(--weight-400);
+
+  .coin {
+    margin-left: 8px;
+  }
+}
+

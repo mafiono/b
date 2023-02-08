@@ -1,0 +1,157 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.head {
+  @include flexbox(center, stretch);
+
+  flex-direction: row;
+  padding: 12px;
+  border-bottom: 1px solid var(--color-line-1);
+  font-weight: var(--weight-500);
+  font-size: 16px;
+  line-height: 24px;
+
+  div {
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  @media(max-width: 768px){
+    div {
+      padding: 0 6px;
+    }
+  }
+}
+
+.list {
+  @include flexbox(stretch, stretch);
+
+  flex-direction: column;
+  max-height: 50vh;
+  max-width: 290px;
+  width: 100vw;
+
+  @media(max-width: 768px)  {
+    max-width: 345px;
+    max-height: 460px;
+  }
+}
+
+.coins {
+  @include with_scrollbar(var(--color-modal-bg), var(--color-profile-menu-shadow));
+  overflow: auto;
+  flex: 1;
+  max-height: 100%;
+  padding: 12px 0;
+}
+
+.coin {
+  @include flexbox(center, stretch);
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  width: 100%;
+  min-height: 24px;
+
+  &.with_rate {
+    padding: 6px 24px;
+  }
+
+  &:hover {
+    background-color: var(--color-header-coin-widget-hover);
+  }
+
+  &_name {
+    padding: 0 11px;
+    flex: 1;
+    font-weight: var(--weight-500);
+    text-align: left;
+  }
+
+  &_balance {
+    font-weight: var(--weight-500);
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &_rate_balance {
+    font-weight: var(--weight-600);
+    font-size: 8px;
+    line-height: 12px;
+    text-align: right;
+  }
+
+  &_in_usd {
+    font-weight: var(--weight-500);
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media(max-width: 768px){
+    padding: 12px 4px 12px 18px;
+  }
+}
+
+.rest {
+  opacity: 0.5;
+}
+
+.footer {
+  @include flexbox(center, center);
+  padding: 12px 24px;
+  border-top: 1px solid var(--color-line-1);
+
+  @media(max-width: 768px){
+    padding: 12px 18px;
+  }
+}
+
+.settings {
+  flex: 0 0 36px;
+  margin-right: 12px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-line-1);
+  color: var(--color-button);
+}
+
+.price {
+  flex: 1;
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  &_row {
+    @include flexbox(center, flex-end);
+
+    font-weight: var(--weight-500);
+    font-size: 14px;
+    line-height: 18px;
+    width: 100%;
+    text-align: right;
+    min-height: 18px;
+    margin-bottom: 8px;
+
+    & > span {
+      margin-left: 4px;
+    }
+  }
+}
+
+.gray {
+  opacity: 0.5;
+}
+
+.dollar {
+  color: var(--color-brand);
+}
+
+.toggle {
+  @include flexbox(center, center);
+  padding-left: 6px;
+}
+
+.deposit {
+  padding: 0 17px;
+}

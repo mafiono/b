@@ -1,0 +1,22 @@
+.right {
+  button {
+    color: var(--color-icon);
+
+    &.max {
+      margin-right: 10px;
+      color: var(--color-brand);
+      border-right: 1px solid var(--color-line-1);
+      padding-right: 10px;
+    }
+  }
+}
+
+.mobile_margin {
+  @media(max-width: 768px){
+    margin-bottom: 16px;
+  }
+}
+
+.background {
+  background-color: var(--color-background-mesg);
+}

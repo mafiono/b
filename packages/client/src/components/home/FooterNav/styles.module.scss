@@ -1,0 +1,16 @@
+@import "../../../../../../node_modules/@betnomi/libs/assets/styles/mixins";
+
+.nav {
+	@include flexbox(flex-start, space-between);
+	margin-bottom: 33px;
+
+	@media(max-width: 768px) {
+		flex-wrap: wrap;
+
+		& > div{
+			flex-basis: 50%;
+			margin-bottom: 32px;
+		}
+	}
+}
+

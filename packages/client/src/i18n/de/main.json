@@ -1,0 +1,4 @@
+{
+  "Hello": "Hallo (Dies ist eine i18-Nachricht)",
+  "We use natural keys, without any dashes in i18n": "Wir verwenden natürliche Schlüssel ohne Bindestriche in i18n (dies ist auch eine übersetzte Nachricht)"
+}

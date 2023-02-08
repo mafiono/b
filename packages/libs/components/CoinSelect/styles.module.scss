@@ -1,0 +1,85 @@
+@import "../../assets/styles/mixins";
+
+.name {
+  @include flexbox(center, flex-start);
+  @include ellipsis(100%);
+
+  flex: 1 1 100%;
+  width: 100%;
+  text-align: left;
+  text-transform: capitalize;
+  padding-right: 16px;
+
+  .list & {
+    justify-content: space-between;
+  }
+
+  * {
+    min-width: 0;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.button, .select {
+  @include flexbox(center, stretch);
+
+  transition: all $transition-time;
+  width: 100%;
+  flex-direction: row;
+  height: 44px;
+  color: var(--color-icon);
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--color-background-mesg);
+  &:hover {
+    color: inherit;
+  }
+}
+
+.icon {
+  @include flexbox(center, center);
+
+  flex: 0 0 44px;
+  width: 44px;
+  color: inherit;
+}
+
+.line {
+  width: 1px;
+  margin-left: 12px;
+  height: 24px;
+  background-color: var(--color-line-1);
+}
+
+.list {
+  @include flexbox(center, center);
+
+  margin: auto;
+  flex-direction: column;
+  padding: 6px 0;
+
+  & > * {
+    flex: 0 0 44px;
+  }
+}
+
+.float {
+  overflow: auto;
+  background: var(--color-input-background);
+  border-radius: 4px;
+  border: 1px solid var(--color-select-border);
+  z-index: 101;
+  @include with_scrollbar(var(--color-input-background));
+  @include max_dropdown_height;
+
+  &.hidden {
+    @include hidden;
+  }
+}
+
+.type {
+  padding: 0 16px;
+}

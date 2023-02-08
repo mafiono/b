@@ -1,0 +1,28 @@
+.wrapper {
+  height: auto;
+  min-height: 44px;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+
+  textarea {
+    background: none;
+    border: none;
+    width: 100%;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: var(--weight-400);
+  }
+}
+
+.limit {
+  color: var(--color-title);
+  text-align: right;
+  width: 100%;
+  padding: 4px 12px;
+}

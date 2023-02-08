@@ -1,0 +1,34 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 16px;
+
+  @media(max-width: 768px) {
+    column-gap: 8px;
+  }
+
+  @media( min-width: 768px) and (max-width: 1400px)  {
+    column-gap: 10px;
+  }
+}
+
+.wallet, .user {
+  @include flexbox(center, center);
+}
+
+.wallet {
+  padding-right: 16px;
+  position: relative;
+
+  @include separator_right();
+
+  @media(max-width: 768px) {
+    padding-right: 0;
+
+    &:after{
+      content: unset;
+    }
+  }
+}

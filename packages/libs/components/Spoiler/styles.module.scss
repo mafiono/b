@@ -1,0 +1,31 @@
+@import "../../assets/styles/mixins";
+
+.hide {
+  height: 0;
+
+  .active & {
+    height: 100%;
+    margin-top: 12px;
+  }
+}
+
+.button {
+  @include flexbox(center, center);
+
+  width: 100%;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-button);
+}
+
+.arrow {
+  opacity:1;
+  transition: all $transition-time;
+  transform: rotate(0);
+  margin-left: 10px;
+
+  .active  & {
+    transform: rotate(180deg);
+  }
+}

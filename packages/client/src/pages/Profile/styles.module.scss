@@ -1,0 +1,22 @@
+.head {
+  padding: 48px 48px 0 48px;
+  box-shadow: inset var(--color-line-1) 0 -1px;
+  background-color: var(--color-profile-head-background);
+  @media (max-width: 768px) {
+    padding: 32px 15px;
+    h4{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.tabs {
+  margin-top: 48px;
+}
+
+.content {
+  margin: 48px;
+  @media (max-width: 768px) {
+    margin: 15px;
+  }
+}

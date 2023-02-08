@@ -1,0 +1,113 @@
+@import "../../../../../node_modules/@betnomi/libs/assets/styles/mixins";
+
+.wrap {
+  @include flexbox(center, center);
+
+  .wallet{
+    background-color: var(--color-brand);
+    box-shadow: unset;
+
+    &:hover{
+      background-color: var(--color-brand-hover);
+    }
+
+    @media(max-width: 768px) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.manager {
+  position: relative;
+
+  background-color: var(--color-header-coin-widget);
+  border-radius: 8px;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 8px;
+
+  @media(max-width: 768px) {
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.widget {
+  @include flexbox(center, center);
+
+  min-width: 0;
+  flex-direction: row;
+  border: none;
+  background: transparent;
+  color: inherit;
+
+  @media( min-width: 768px) and (max-width: 1400px)  {
+    font-size: 12px;
+  }
+}
+
+.selected, .balance {
+  @include flexbox(center, center);
+
+  flex-direction: row;
+  padding: 12px;
+  font-weight: var(--weight-500);
+  min-height: 44px;
+}
+
+.selected {
+  @include flexbox(center, stretch);
+  @include separator_right(24px);
+
+  font-weight: var(--weight-500);
+  position: relative;
+
+  span {
+    padding: 0 11px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 13px 8px 13px 12px;
+
+    span{
+      display: none;
+    }
+
+    img{
+      margin-right: 9px;
+    }
+
+    i{
+      color: #696E87;
+    }
+  }
+}
+
+.floating {
+  background-color: var(--color-modal-bg);
+  border-radius: 8px;
+  box-shadow: 0 40px 80px var(--color-profile-menu-shadow);
+
+  &.hidden {
+    @include hidden();
+  }
+
+  [data-popper-arrow] {
+    margin-top: -6px;
+
+    svg {
+      fill: var(--color-modal-bg);
+    }
+  }
+
+  @media(max-width: 768px){
+    transform: translate3d(-52px, 76px, 0px) !important;
+  }
+}
+
+.rest {
+  opacity: 0.5;
+}

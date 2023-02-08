@@ -1,0 +1,98 @@
+@import "~@betnomi/libs/assets/styles/variables";
+@import "~@betnomi/libs/assets/styles/_mixins";
+
+.page {
+  padding: 32px $main_layout_padding 52px $main_layout_padding ;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  h1{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+
+  @media(max-width: 768px)  {
+    padding: 25px 15px;
+
+    h1{
+      font-size: 18px;
+    }
+  }
+}
+
+.promotionsList{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 50px;
+
+  .listItem{
+    @include flexbox(flex-start, space-between);
+
+    &:not(:last-child){
+      margin-bottom: 32px;
+    }
+
+    img{
+      display: block;
+      width: 60%;
+      height: auto;
+      min-height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-right: 48px;
+    }
+
+    & > div{
+      width: 40%;
+    }
+  }
+
+  .itemTitle{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+
+  .text{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-button);
+    margin-bottom: 32px;
+  }
+
+  @media(max-width: 768px){
+    .listItem{
+      flex-wrap: wrap;
+
+      & > div{
+        width: 100% !important;
+      }
+
+      img{
+        width: 100% !important;
+        margin-bottom: 16px;
+        margin-right: 0;
+      }
+    }
+
+    .itemTitle{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .text{
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .button{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "~@betnomi/libs/assets/styles/variables";
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.bannerOverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 50, 32, 0.5);;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  button{
+    margin-bottom: 0;
+  }
+
+  .smallImg{
+    width: 88px;
+    height: 88px;
+    filter: drop-shadow(0px 24px 52px rgba(0, 0, 0, 0.6));
+    border-radius: 12px;
+  }
+
+  .bottomBlock{
+    margin-top: auto;
+    width: 100%;
+    @include flexbox(center, space-between);
+
+    & > div {
+      flex-grow: 1;
+
+      p{
+        text-align: left;
+      }
+    }
+
+    .bannerTitle{
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+    .bannerText{
+      font-size: 14px;
+      line-height: 18px;
+      color: #C3C5CF;
+    }
+  }
+}
+
+.homeBanOverlay {
+  background-color: rgba(1, 50, 32, 0.3);
+  padding: 32px 40px;
+
+  .mainBlock {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+
+    .title {
+      font-weight: bold;
+      font-size: 44px;
+      line-height: 52px;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+
+    }
+
+    button {
+      margin-top: auto;
+    }
+  }
+
+  @media(max-width: 768px) {
+    padding: 24px;
+
+    .mainBlock{
+      .title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 8px;
+      }
+      .text {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      button {
+        height: 36px !important;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+
+}

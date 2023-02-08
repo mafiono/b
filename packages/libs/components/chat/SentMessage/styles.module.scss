@@ -1,0 +1,21 @@
+@import "../../../assets/styles/variables";
+
+.message {
+  padding-left: 44px + 16px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: var(--weight-400);
+}
+
+.text {
+  border-radius: 8px 8px 0 8px;
+  background-color: var(--color-chat-sent);
+  padding: 12px 16px;
+  white-space: pre-line;
+}
+
+.time {
+  margin-bottom: 10px;
+  text-align: right;
+  color: var(--color-icon);
+}

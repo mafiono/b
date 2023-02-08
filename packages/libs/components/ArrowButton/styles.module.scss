@@ -1,0 +1,30 @@
+$size: 36px;
+
+.button {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #313549;
+  background-color: transparent;
+  width: $size;
+  height: $size;
+  text-align: center;
+
+  &:disabled {
+    opacity: .3;
+  }
+}
+
+.icon {
+  color: #696E87;
+  position: absolute;
+
+  &.left {
+    top: 9px;
+    left: 7px;
+  }
+
+  &.right {
+    top: 9px;
+    left: 9px;
+  }
+}

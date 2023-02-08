@@ -1,0 +1,49 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+@import "~@betnomi/libs/assets/styles/_variables";
+
+.out {
+  width: 100%;
+}
+
+.row {
+  @include flexbox(center, space-between);
+
+  background: var(--color-black);
+  height: 50px;
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.cell {
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-white);
+  font-weight: var(--weight-400);
+  margin-right: 32px;
+}
+
+.social_group {
+  @include flexbox(center, center);
+  color: var(--color-icon);
+}
+
+.arrow {
+  transition: all $transition-time;
+  transform: rotate(0);
+  margin-left: 10px;
+  color: var(--color-icon);
+  
+  .open  & {
+    transform: rotate(180deg);
+    color: var(--color-brand);
+  }
+}
+
+.description {
+  height: 0;
+
+  .open & {
+    display: block;
+  }
+}

@@ -1,0 +1,41 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: false
+  tasks:
+    - name: remove old frontend files
+      file:
+        path: "{{ www_path }}"
+        state: absent
+      become: true
+
+    - name: create frontend directory
+      file:
+        path: "{{ www_path }}"
+        state: directory
+        owner: root
+        group: root
+        mode: 0755
+      become: true
+
+    - name: Copy build
+      copy:
+        src:  "../{{ artifact_name }}"
+        dest: "{{ www_path }}"
+
+    - name: Extract build
+      unarchive:
+        src:   "{{ www_path }}/{{ artifact_name }}"
+        dest:  "{{ www_path }}"
+        mode:  0755
+        owner: www-data
+        group: www-data
+        remote_src: yes
+      become: true
+
+    - name: remove build package
+      file:
+        path: "{{ www_path }}/{{ artifact_name }}"
+        state: absent
+      become: true
+

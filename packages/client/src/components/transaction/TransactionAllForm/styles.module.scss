@@ -1,0 +1,85 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.filters {
+  @include flexbox(center, flex-start);
+  margin: 17px 0 24px 0;
+}
+
+.type {
+  width: 240px;
+}
+
+.result {
+  width: 160px;
+  margin-left: 16px;
+}
+
+.label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--color-icon);
+  margin-bottom: 15px;
+}
+
+.form {
+  @include flexbox(center, space-between);
+
+  &.sportBets {
+    flex-direction: column;
+
+    @media(max-width: 768px) {
+      .select {
+        background: var(--color-input-background);
+      }
+      .submit {
+        width: 100%;
+      }
+      .label {
+        margin-bottom: 5px;
+      }
+      .result {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px;
+      }
+      .type {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .filters{
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+.submit {
+  margin-top: 29px;
+}
+
+.option {
+  @include flexbox(center, space-between);
+  
+  color: var(--color-white);
+  height: 40px;
+  padding: 12px; 
+
+  &.selected {
+    background: var(--color-select-background);
+    border-radius: 4px;
+  }
+}
+
+.check_icon {
+  color: var(--color-brand);
+}
+
+.select {
+  background: var(--color-background-tabs);
+  border-radius: 4px;
+}

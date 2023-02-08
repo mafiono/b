@@ -1,0 +1,18 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.header {
+  @include flexbox(center, space-between);
+  line-height: 24px;
+}
+
+.close {
+  color: var(--color-button);
+}
+
+.line_wrap {
+  margin: 24px 0;
+
+  @media(max-width: 768px) {
+    margin: 16px;
+  }
+}

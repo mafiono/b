@@ -1,0 +1,98 @@
+@import "~@betnomi/libs/assets/styles/_variables";
+@import "~@betnomi/libs/assets/styles/_mixins";
+
+
+.button {
+  @include flexbox(center, flex-start);
+
+  width: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: var(--weight-500);
+  color: var(--color-icon);
+  height: 44px;
+
+  &.active  {
+    @include flexbox(center, center);
+  }
+}
+
+.text {
+  margin-left: 16px;
+  opacity: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: all $transition-time;
+  display: none;
+
+  &.active {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.short_label {
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.arrow {
+  opacity:1;
+  margin-left: auto;
+  transition: all $transition-time;
+  transform: rotate(-90deg);
+}
+
+.text_wrap {
+  @include flexbox(center, flex-start);
+}
+
+.icon {
+  transition: all $transition-time;
+
+  @media(max-width: 768px) {
+    font-size: 24px !important;
+  }
+}
+
+.items {
+  background: var(--color-menu-bg);
+  border-radius: 4px;
+  padding: 4px 12px;
+  list-style: none;
+  width: 100%;
+  transition: max-height ease-out 0.3s;
+
+  [data-popper-arrow] {
+    svg {
+      fill: var(--color-profile-menu);
+    }
+  }
+
+  &.hidden {
+    @include hidden();
+  }
+
+  @media(max-width: 768px) {
+    position: static !important;
+    transform: unset !important;
+    max-height: 500px;
+    padding-left: 50px;
+
+    &.hidden {
+      height: 0;
+      padding: 0;
+    }
+  }
+}
+
+.button_lang {
+  color: var(--color-white);
+  display: block;
+  height: 44px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

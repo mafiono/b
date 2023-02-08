@@ -1,0 +1,31 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.result {
+  @include flexbox(center, space-between);
+
+  .price {
+    color: var(--color-white);
+  }
+}
+
+.win {
+  color:var(--color-profile-win);
+}
+
+.returned {
+  color: var(--color-profile-returned);
+}
+
+.lost {
+  color: var(--color-profile-lost);
+}
+
+.unsettledprice {
+  color: var(--color-profile-unsettled);
+}
+
+.cashout,
+.unsettled {
+  color: var(--color-icon);
+}
+

@@ -1,0 +1,13 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.status {
+  color: var(--color-white);
+}
+
+.Completed {
+  color: var(--color-brand);
+}
+
+.Canceled {
+  color: var(--color-error);
+}

@@ -1,0 +1,26 @@
+.line_out {
+  margin: 24px 0;
+
+  @media(max-width: 768px)  {
+    margin: 16px 0 24px 0;
+  }
+}
+
+.banner {
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-white);
+  font-weight: var(--weight-400);
+
+  @media(max-width: 768px)  {
+    font-size: 16px;
+  }
+}
+
+.socials_wrap {
+  margin-top: 16px;
+}

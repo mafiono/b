@@ -1,0 +1,19 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.out {
+  @include flexbox(center, center);
+}
+
+.line {
+  width: 50%;
+  height: 1px;
+  background: var(--color-line-1);
+}
+
+.text {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-icon);
+  margin: 0 10px;
+  flex-shrink: 0;
+}

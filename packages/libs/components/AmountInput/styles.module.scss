@@ -1,0 +1,11 @@
+.icon {
+    background-color: var(--color-background-mesg);
+}
+
+.balance {
+    position: absolute;
+    right: 12px;
+    @media (max-width: 425px) {
+        display: none;
+    }
+}

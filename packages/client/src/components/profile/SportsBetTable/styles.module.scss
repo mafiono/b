@@ -1,0 +1,38 @@
+.table {
+  //for padding and - margin
+  width: calc(100% + 64px);
+  border-collapse: collapse;
+  margin: 0 -32px;
+}
+
+.head {
+  background:var(--color-profile-table-head-background);
+}
+
+.tr {
+  padding-left: 32px;
+}
+
+.th {
+  text-align: left;
+  padding: 16px 6px;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-icon);
+  white-space: nowrap;
+}
+
+.td {
+  text-align: left;
+  padding: 16px 0;
+
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-white);
+}
+
+.td_m {
+  padding-left:32px;
+}

@@ -1,0 +1,25 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.form {
+  display: grid;
+
+  grid-row-gap: 12px;
+  grid-auto-flow: row;
+  width: 100%;
+}
+
+.textarea {
+  min-height: 120px;
+
+  @include with_scrollbar(var(--color-input-background));
+}
+
+.minimum {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-icon);
+}
+
+.total {
+  padding: 22px 0;
+}

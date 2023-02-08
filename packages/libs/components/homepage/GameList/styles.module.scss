@@ -1,0 +1,94 @@
+@import "~@betnomi/libs/assets/styles/_variables";
+
+$gradient_left: linear-gradient(to left, transparent, var(--color-background) 40%);
+$gradient_right: linear-gradient(to right, transparent, var(--color-background) 40%);
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  :global {
+    .swiper-slide {
+      width: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.text_center {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  background: no-repeat center;
+  margin-right: 22px;
+}
+
+.right_margin {
+  margin: 8px;
+}
+
+.gradient_border {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-time;
+
+  &:not(.disabled) {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.left {
+    left: 0;
+    background: $gradient_left;
+  }
+
+  &.right {
+    right: 0;
+    background: $gradient_right;
+  }
+}
+
+.buttons{
+
+  button:first-child{
+    margin: 0;
+    margin-right: 8px;
+  }
+}
+
+.gameListItem{
+  width: 100%;
+  height: 100%;
+
+  &:hover{
+    .overlay{
+      opacity: 1;
+    }
+  }
+}

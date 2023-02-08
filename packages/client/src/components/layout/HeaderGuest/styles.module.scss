@@ -1,0 +1,12 @@
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 16px;
+
+  @media(max-width: 768px){
+    column-gap: 10px;
+    button{
+      padding: 10px 22px;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@import "../../../../../../node_modules/@betnomi/libs/assets/styles/mixins";
+
+.footer {
+	background: var(--color-background);
+	margin-top: 50px;
+
+	&_bottom {
+		@include flexbox(center, space-between);
+		padding-bottom: 16px;
+	}
+
+	&_desc {
+		margin-bottom: 16px;
+		padding: 30px 0;
+		@include flexbox(center, center);
+		border-top: 1px solid var(--color-line-2);
+		border-bottom: 1px solid var(--color-line-2);
+	}
+
+	&_text {
+		color: var(--color-icon);
+		font-size: 12px;
+	}
+
+	@media(max-width: 768px) {
+		margin-top: 24px;
+		padding-bottom: 72px;
+		&_desc {
+			justify-content: space-between;
+			flex-wrap: wrap;
+			.logo{
+				order: 1;
+				margin-right: 0;
+			}
+			.footer_text{
+				order: 3;
+				width: 100%;
+				margin-top: 25px;
+			}
+			.desc_img_wrap{
+				order: 2;
+				margin-left: 0;
+			}
+		}
+	}
+
+}
+
+.social {
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+	color: var(--color-icon);
+}
+
+.copyright {
+	background: var(--color-black);
+	color: #696E87;
+	font-size: 12px;
+	line-height: 32px;
+	padding: 0 12px;
+	min-height: 32px;
+	border-radius: 8px;
+}
+
+.logo {
+	width: 116px;
+	height: 32px;
+	margin-right: 75px;
+}
+
+.desc_img_wrap {
+	@include flexbox(center, center);
+	margin-left: 100px;
+
+	.gambling{
+		height: 30px;
+		@media(max-width: 768px) {
+			height: auto;
+		}
+	}
+}
+
+.shield {
+	max-width: 40px;
+	height: 40px;
+	margin-left: 16px;
+
+	@media(max-width: 768px) {
+		max-width: 22px;
+		height: auto;
+	}
+}
+
+.coins {
+	margin-bottom: 32px;
+	padding: 24px 0;
+	border-top: 1px solid var(--color-line-2);
+	border-bottom: 1px solid var(--color-line-2);
+
+	@media(max-width: 768px) {
+		padding: 16px 0;
+	}
+}
+
+.btc_rates{
+	@include flexbox(center, center);
+	border-radius: 8px;
+	padding: 8px 10px;
+	background: var(--color-black);
+	color: var(--color-button);
+	font-size: 12px;
+
+	img{
+		margin-right: 8px;
+	}
+
+	@media(max-width: 768px) {
+		display: none;
+	}
+}
+

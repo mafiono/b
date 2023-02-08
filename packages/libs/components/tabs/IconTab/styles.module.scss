@@ -1,0 +1,13 @@
+@import "../../../assets/styles/mixins";
+
+.tab {
+  @include flexbox(center, center);
+
+  i {
+    margin-right: 13px;
+
+    :global(.active) & {
+      color: var(--color-brand)
+    }
+  }
+}

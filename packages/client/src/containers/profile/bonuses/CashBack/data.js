@@ -1,0 +1,51 @@
+export default [
+  {
+    withdrawn: '0.00',
+    pending: '0.00',
+    available: '0.00',
+    active: false,
+    type: 'BTC',
+  },
+  {
+    withdrawn: '123.00',
+    pending: '436.53',
+    available: '436.53',
+    active: true,
+    type: 'USDT',
+  },
+  {
+    withdrawn: '0.00',
+    pending: '24.54',
+    available: '0.00',
+    active: false,
+    type: 'LTC',
+  },
+  {
+    withdrawn: '0.00',
+    pending: '826.53',
+    available: '0.00',
+    active: false,
+    type: 'TRX',
+  },
+  {
+    withdrawn: '100.00',
+    pending: '100',
+    available: '100',
+    active: true,
+    type: 'ETH',
+  },
+  {
+    withdrawn: '0.00',
+    pending: '5.23',
+    available: '0.00',
+    active: false,
+    type: 'BTC',
+  },
+  {
+    withdrawn: '0.00',
+    pending: '0.00',
+    available: '0.00',
+    active: false,
+    type: 'BNB',
+  },
+];

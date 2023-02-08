@@ -1,0 +1,41 @@
+@import "~@betnomi/libs/assets/styles/variables";
+@import "~@betnomi/libs/assets/styles/mixins";
+
+
+.gameOverlay{
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.2);
+  transition: opacity 0.3s;
+  @include flexbox(center, center);
+  flex-direction: column;
+
+  span{
+    color: var(--color-brand);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+
+.playBtn{
+  width: 46px;
+  height: 46px;
+  background-color: var(--color-brand);
+  border-radius: 50%;
+  @include flexbox(center, center);
+  margin-bottom: 12px;
+  transition: background-color 0.3s;
+
+  img{
+    margin-left: 5px;
+  }
+
+  &:hover{
+    background-color: var(--color-brand-hover);
+  }
+}

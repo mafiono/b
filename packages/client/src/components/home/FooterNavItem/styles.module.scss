@@ -1,0 +1,24 @@
+@import "../../../../../../node_modules/@betnomi/libs/assets/styles/mixins";
+
+.navGrp {
+	@include flexbox(flex-start);
+	flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin:0;
+}
+
+.navItem {
+	margin-bottom: 15px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.navLabel {
+	font-size: 14px;
+	color: var(--color-button);
+	font-weight: var(--weight-500);
+	margin-bottom: 24px;
+}

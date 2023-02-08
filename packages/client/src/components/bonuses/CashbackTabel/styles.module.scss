@@ -1,0 +1,138 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.title_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 32px;
+    border-bottom: 2px dashed var(--color-line-1);
+}
+
+.title {
+    h4 {
+        margin-bottom: 17px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    p {
+        width: 592px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.cashback_value {
+    font-size: 52px;
+    line-height: 1;
+    color: var(--color-brand);
+}
+
+.description {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-icon);
+}
+
+.link {
+    margin: 24px 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--color-brand);
+    cursor: pointer;
+}
+
+.right_panel {
+    display: flex;
+}
+
+.my_cashback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 32px;
+    margin-right: 32px;
+    border-right: 1px solid var(--color-line-1);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_header {
+    background: #1C1F2F;
+}
+
+.th{
+    text-align: left;
+    padding: 16px 32px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--color-icon);
+}
+
+.tr:not(:last-child) {
+    border-bottom: 1px solid var(--color-line-1);
+}
+
+.td {
+    text-align: left;
+    padding: 8px 32px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--color-white);
+    &:first-child {
+        width: 30%;
+    }
+    &:nth-child(2){
+        width: 30%;
+    }
+    &:nth-child(3){
+        width: 20%;
+    }
+    &:nth-child(4){
+        width: 20%;
+    }
+}
+
+.td_wrap{
+    display: flex;
+    img {
+        margin-left: 8px;
+    }
+}
+
+.withdrawn_button{
+    display:flex;
+    align-items: center;
+    padding: 9px 12px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--color-button);
+    background-color: var(--color-background-mesg);
+    border-radius: 8px;
+}
+
+.active {
+    color: var(--color-white);
+    background-color: var(--color-brand);
+}

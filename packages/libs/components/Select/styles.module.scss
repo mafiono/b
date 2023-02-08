@@ -1,0 +1,68 @@
+@import "@betnomi/libs/assets/styles/mixins";
+
+.button {
+  color: inherit;
+  width: 100%;
+}
+
+.value {
+  @include flexbox(stretch, stretch);
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px;
+  @include ellipsis(100%);
+}
+
+.floater {
+  background: var(--color-input-background);
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 99;
+  border: 1px solid var(--color-select-border);
+
+  @include with_scrollbar(var(--color-input-background));
+  @include max_dropdown_height;
+
+  &.hidden {
+    @include hidden;
+  }
+}
+
+.list {
+  @include flexbox(stretch, stretch);
+  flex-direction: column;
+  width: 100%;
+}
+
+.option {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+
+  @include ellipsis(100%);
+}
+
+.empty {
+  color: var(--color-icon);
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+}
+
+.chevron {
+  color: var(--color-icon);
+  padding-right: 10px;
+}
+
+.variant {
+  color: inherit;
+  border-radius: 4px;
+  text-align: left;
+
+  &:hover, &:focus {
+    background-color: var(--color-select-hover);
+    border-radius: 2px;
+  }
+}

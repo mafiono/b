@@ -1,0 +1,99 @@
+.head {
+  box-shadow: inset var(--color-line-1) 0 -1px;
+  background-color: var(--color-profile-table-head-background);
+  border-radius: 12px 12px 0px 0px;
+}
+
+.tabs {
+  margin-top: 48px;
+}
+
+.content {
+  margin-right: 64px;
+  @media (max-width: 768px) {
+    margin: 15px;
+  }
+}
+
+.mainTab{
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-bottom: 1px solid var(--color-line-1);
+}
+
+.heading{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+// table
+
+
+.headingFootballer{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color:var(--color-white);
+}
+
+.colorBrand{
+  color:var(--color-brand);
+}
+.colorButton{
+  color:var(--color-button)
+}
+
+// table
+
+.gmaeFlex{
+  display: flex;
+  align-items: center;
+  i{
+    margin-right: 10px;
+  }
+}
+
+.headingBrand{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color:var(--color-brand);
+}
+
+.headingWhite{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+   color: #FFFFFF;
+}
+
+.headingButton{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color:var(--color-button)
+}
+
+.img{
+  height: 14px;
+  width: 14px;
+  margin-left: 10px;
+}
+.imgHidden{
+  height: 14px;
+  width: 14px;
+  margin-right: 10px;
+}

@@ -1,0 +1,23 @@
+@import "~@betnomi/libs/assets/styles/_mixins";
+
+.container {
+  @include flexbox(center, space-between);
+  
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  & > img:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  @include for_breakpoint_width(1439px){
+    justify-content: center;
+  }
+
+  @media(max-width: 768px) {
+    & > img:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+

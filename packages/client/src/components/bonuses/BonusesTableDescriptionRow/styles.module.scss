@@ -1,0 +1,85 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.wrap {
+  @include flexbox(stretch, space-between);
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: var(--color-sports-row-desc-background);
+  transition-property: max-height;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+  &.active{
+  max-height: 150px;
+  transition-delay: 0s;
+}
+}
+
+.left_panel {
+  width: 100%;
+  padding: 16px 25px 16px 32px;
+  border-right: 1px solid var(--color-menu-lang-switch);
+  color: var(--color-button);
+}
+
+.value {
+  @include flexbox(stretch, space-between);
+  margin-bottom: 4px;
+}
+.range {
+  margin-bottom: 10px;
+}
+
+.info_wrap {
+  @include flexbox(flex-start, space-between)
+}
+
+.date_wrap {
+  flex-wrap: nowrap;
+  padding-right: 32px;
+  border-right: 1px solid var(--color-line-1);
+  & > div:not(:last-child){
+    margin-bottom: 8px;
+  }
+}
+
+.wager_info {
+  padding-left: 32px;
+  flex-grow: 1;
+  & > div:not(:last-child){
+    margin-bottom: 8px;
+  }
+}
+
+.buttons_wrap {
+  padding: 16px 32px 0 25px;
+}
+
+.confirm_button {
+  @include flexbox(center, center);
+  width: 160px;
+  height: 44px;
+  border-radius: 8px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-white);
+  background-color: var(--color-vip);
+}
+
+.white_color {
+  margin-left: 4px;
+  color: var(--color-white);
+}
+
+.row_wrap {
+  @include flexbox (center, stretch);
+  img {
+    margin-right: 8px;
+  }
+}

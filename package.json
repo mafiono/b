@@ -1,0 +1,73 @@
+{
+  "name": "betnomi",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "elliptic": "6.5.4",
+    "immer": "8.0.2",
+    "object-path": "0.11.5",
+    "prismjs": "1.23.0",
+    "ini": "2.0.0"
+  },
+  "scripts": {
+    "new": "plop --plopfile generators/index.js",
+    "lint": "yarn eslint . --cache --fix --ext js,jsx,ts,tsx && :",
+    "tsc": "yarn lerna run tsc && :",
+    "start:client": "yarn lerna run start:client",
+    "build:client": "yarn lerna run build:client",
+    "storybook": "start-storybook -p 6006",
+    "fontello": "bash ./fontello.sh",
+    "fontello:open": "fontello-cli --config packages/libs/assets/fonts/fontello/config.json open"
+  },
+  "engines": {
+    "node": "<=14.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn lint",
+      "yarn tsc"
+    ]
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.4.5",
+    "connected-react-router": "6.8.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.13.16",
+    "@storybook/addon-actions": "6.3.0",
+    "@storybook/addon-knobs": "6.3.0",
+    "@storybook/addon-viewport": "6.3.0",
+    "@storybook/react": "6.3.0",
+    "@types/node": "12.0.0",
+    "@types/react": "16.9.0",
+    "@types/react-dom": "16.9.0",
+    "@types/react-router-dom": "5.1.5",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-loader": "8.1.0",
+    "css-loader": "5.2.4",
+    "fontello-cli": "0.6.2",
+    "husky": "4.3.0",
+    "lerna": "4.0.0",
+    "lint-staged": "10.4.0",
+    "node-sass": "5.0.0",
+    "plop": "2.7.4",
+    "react-docgen-typescript-loader": "3.7.2",
+    "react-docgen-typescript-webpack-plugin": "1.1.0",
+    "resolve-url-loader": "4.0.0",
+    "sass-loader": "10.1.1",
+    "storybook-addon-jsx": "7.3.12",
+    "style-loader": "2.0.0"
+  }
+}

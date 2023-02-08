@@ -1,0 +1,106 @@
+@import "~@betnomi/libs/assets/styles/variables";
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.page {
+  padding: 40px $main_layout_padding 32px $main_layout_padding;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  @media(max-width: 768px) {
+    padding: 25px 15px;
+
+    h4 {
+      font-size: 18px;
+    }
+  }
+}
+
+.list {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.title {
+  margin-bottom: 22px;
+}
+
+
+.listItem {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background-color: var(--color-gray-40);
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
+
+  &.listItemBanner {
+    background: url("../../../../libs/assets/img/Union.png") no-repeat top right/contain, var(--color-black);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .popularIcon {
+      width: 48px;
+      height: 48px;
+      background-color: var(--color-brand);
+      @include flexbox(center, center);
+      border-radius: 12px;
+    }
+
+    .playOver {
+      max-width: 220px;
+    }
+
+    & > div {
+      margin-top: auto;
+      @include flexbox(center, space-between);
+
+      i {
+        color: var(--color-button);;
+      }
+
+      i:before {
+        margin: 0;
+      }
+    }
+
+    .games {
+      color: var(--color-brand);
+    }
+  }
+}
+
+.bgrImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.cap {
+  width: 100%;
+  height: 100%;
+  background: url("https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg") no-repeat center/cover;
+}
+
+.banners {
+
+  :global {
+    .swiper-slide {
+      & > img {
+        height: 280px;
+
+        @media(max-width: 768px) {
+          height: 240px;
+        }
+      }
+    }
+  }
+}

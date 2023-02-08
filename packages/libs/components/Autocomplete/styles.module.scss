@@ -1,0 +1,43 @@
+@import "../../assets/styles/mixins";
+
+.wrapper {
+  width: 100%;
+
+  button {
+    color: inherit;
+  }
+}
+
+.float {
+  @include max_dropdown_height;
+  background-color: var(--color-input-background);
+  overflow: auto;
+  border: 1px solid var(--color-select-border);
+  border-radius: 4px;
+
+  &.hidden {
+    @include hidden;
+  }
+}
+
+.list {
+  @include flexbox(flex-start, flex-start);
+
+  flex-direction: column;
+
+  button {
+    color: var(--color-icon);
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+}
+
+.variant {
+  @include flexbox(center, flex-start);
+
+  width: 100%;
+  min-height: 32px;
+  padding: 0 8px;
+}

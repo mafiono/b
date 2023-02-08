@@ -1,0 +1,153 @@
+@import "../../../assets/styles/mixins";
+
+.menu {
+  background-color: var(--color-profile-menu);
+  border-radius: 8px;
+  min-width: 280px;
+  box-shadow: 0px 40px 80px var(--color-profile-menu-shadow);
+
+  @media(max-width: 768px) {
+    min-width: 345px;
+  }
+}
+
+.head {
+  @include flexbox(center, center);
+  flex-direction: column;
+  padding: 20px 16px;
+  box-shadow: var(--color-line-1) 0 1px;
+
+  &_name {
+    @include flexbox(center, center);
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &_progress {
+    margin: 16px 0 8px;
+    width: 100%;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.level {
+  @include flexbox(center, center);
+  position: relative;
+  padding: 6px 14px;
+  height: 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 16px;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    opacity: 0.16;
+    z-index: -0;
+    border-radius: 4px;
+  }
+}
+
+.name {
+  @include flexbox(center, center);
+  text-transform: capitalize;
+  margin-right: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: -3px;
+
+  img {
+    width: 14px;
+    margin-right: 8px;
+  }
+
+  span {
+    @include ellipsis(128px);
+  }
+}
+
+.progress {
+  height: 4px;
+  border-radius: 2px;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    opacity: 0.16;
+    z-index: -0;
+    border-radius: 4px;
+  }
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.percents {
+  @include flexbox(center, stretch);
+  flex-direction: row;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+
+  :last-child {
+    color: var(--color-profile-percent-inactive);
+  }
+}
+
+.list {
+  @include flexbox(center, center);
+  flex-direction: column;
+  padding: 12px 8px;
+
+  &_item {
+    @include flexbox(center, stretch);
+    flex-direction: row;
+    height: 44px;
+    padding: 10px 16px;
+    width: 100%;
+    border-radius: 4px;
+    color: var(--color-icon);
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-profile-menu-hover);
+      color: var(--color-text);
+    }
+
+    span {
+      flex: 1;
+    }
+
+    i {
+      flex: 0 0 16px;
+      margin-right: 12px;
+    }
+  }
+
+  @media(max-width: 768px) {
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,16 @@
+.total {
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--color-text);
+  width: 100%;
+  text-align: center;
+  font-weight: var(--weight-600);
+
+  &_amount {
+    padding-right: 10px;
+  }
+
+  &_coin {
+    color: var(--color-brand);
+  }
+}

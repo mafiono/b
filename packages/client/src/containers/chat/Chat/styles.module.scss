@@ -1,0 +1,68 @@
+@import "@betnomi/libs/assets/styles/mixins";
+@import "@betnomi/libs/assets/styles/variables";
+
+.wrap {
+  @include flexbox(stretch, stretch);
+
+  flex-direction: column;
+  padding: 40px 48px 0 0;
+  height: 100%;
+  width: $chat_width;
+
+  @media(max-width: 768px) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.head {
+  background-color: var(--color-chat-background);
+  border-radius: 12px 12px 0 0;
+
+  @media(max-width: 768px) {
+    border-radius: 0;
+  }
+}
+
+.chat {
+  @include flexbox(center, center);
+
+  background-color: var(--color-chat-background);
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  @media(max-width: 768px) {
+    background: var(--color-header-bg);
+  }
+}
+
+.close {
+  color: var(--color-button);
+  font-size: 24px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-chat-background);
+  border-radius: 0 0 12px 12px;
+
+  @media(max-width: 768px) {
+    border-radius: 0;
+  }
+}
+
+.history {
+  @include flexbox(stretch, stretch);
+
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  width: 100%;
+  padding: 0 4px;
+}
+
+.message {
+  width: 100%;
+}

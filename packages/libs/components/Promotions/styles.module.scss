@@ -1,0 +1,84 @@
+.promotionMain{
+  width: 400px;
+  height: 220px;
+  background: #6B59D9;
+  // background: #63A5F1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.headingPromotion{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.promo{
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.4;
+  z-index: 222;
+}
+
+.promotionHeadingBlock{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:24px 24px 0 24px;
+  z-index: 999;
+}
+.promoPara{
+  position: relative;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding-left: 24px;
+  margin-top: 4px;
+  z-index: 333;
+  max-width: 230px;
+}
+.ellips{
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  // background: linear-gradient(75.04deg, #6B59D9 22.81%, #816EF5 84.87%);
+}
+.round{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.promoBackgroundImg{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  width: 70%;
+}
+
+.backgroundDots{
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.mainPicDots{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+}

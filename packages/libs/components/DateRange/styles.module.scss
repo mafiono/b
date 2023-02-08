@@ -1,0 +1,51 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rectangle {
+  margin: 0 8px;
+  height: 2px;
+  width: 12px;
+  background-color: var(--color-button);
+  border-radius: 5px;
+}
+
+.input {
+  width: 100%;
+  background-color: inherit;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--color-white);
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.input_wrapper {
+  @include flexbox(center,  space-between);
+
+  width: 100%;
+  position: relative;
+  background-color: var(--color-modal-bg);
+}
+
+.icon {
+  color: var(--color-icon);
+}
+
+.icon_wrapper {
+  @include flexbox(center, space-between);
+
+  color: var(--color-icon);
+}
+
+.line {
+  width: 2px;
+  height: 24px;
+  background-color: var(--color-line-1);
+  margin: 0 12px;
+}

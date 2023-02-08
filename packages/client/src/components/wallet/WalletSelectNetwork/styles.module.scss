@@ -1,0 +1,54 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.value {
+  @include flexbox(center, center);
+  flex-direction: row;
+  white-space: nowrap;
+  min-width: 0;
+
+  &__name {
+    @include ellipsis(100%);
+    color: var(--color-text);
+  }
+
+  &__coin {
+    flex: 1;
+    color: var(--color-icon);
+    padding-left: 5px;
+    @include ellipsis(100%);
+  }
+}
+
+.option {
+  @include flexbox(center, center);
+  flex-direction: row;
+  padding: 12px;
+
+  &__left {
+    flex: 1;
+  }
+
+  &:hover .option__name {
+    color: var(--color-brand);
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-icon);
+  }
+
+  &__right {
+    font-size: 14px;
+    line-height: 18px;
+    white-space: nowrap;
+  }
+}
+
+.arrival {
+  color: var(--color-icon);
+
+  &__mins {
+    color: var(--color-text);
+  }
+}

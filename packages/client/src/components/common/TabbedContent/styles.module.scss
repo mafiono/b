@@ -1,0 +1,21 @@
+.wrap {
+  background: var(--color-tabbed-content-background);
+  border-radius: 12px;
+}
+
+.tabs {
+  background: var(--color-tabbed-content-tabs);
+  height: 60px;
+  border-radius: 12px 12px 0 0;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+.content {
+  padding: 36px 32px;
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
+}

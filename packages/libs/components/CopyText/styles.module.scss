@@ -1,0 +1,44 @@
+@import "../../assets/styles/mixins";
+
+.container {
+  width: 100%;
+  @include flexbox(center, space-between);
+
+  background: var(--color-copytext-background);
+  border-radius: 8px;
+  padding: 8px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
+
+.text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: var(--font-weight-500);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-white);
+  margin-right: 34px;
+  word-break: break-all;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.button {
+  background: var(--color-copytext-button-background);
+  border-radius: 8px;
+  color: var(--color-icon);
+  padding: 10px;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+.disabled {
+  opacity: 0.7;
+}

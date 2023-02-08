@@ -1,0 +1,195 @@
+@import './styles/variables';
+@import './styles/fonts';
+@import './styles/scroll';
+@import './fonts/fontello/css/fontello.css';
+@import "~react-datepicker/dist/react-datepicker.css";
+
+:root {
+  --color-brand: #6AD035;
+  --color-brand-hover: #61BC31;
+  --color-brand-disabled: #BDE1AA;
+  --color-error: #CC193E;
+
+  --color-white: #ffffff;
+  --color-black: #222638;
+  --color-success: #55B88D;
+  --color-info: #2B83D4;
+  --color-warning: #FFBF2E;
+  --color-error: #CC193E;
+
+  --color-gray-80: #4E5260;
+  --color-gray-60: #7B7D88;
+  --color-gray-40: #A7A8B0;
+  --color-gray-20: #D3D4D7;
+  --color-gray-10: #E9E9EB;
+
+  --color-button: #696E87;
+  --color-icon: #696E87;
+
+  --color-title: #464A5E;
+  --color-background-tabs: #292E42;
+  --color-background-mesg: #272B3F;
+  --color-line-1: #313549;
+  --color-line-2: #212536;
+
+  --color-orange: #FFA325;
+  --color-light-blue: #E4F2FF;
+  --color-purpure: #8048F7;
+  --color-copyright: #404458;
+
+  --color-loyal: #E4F2FF;
+  --color-hero: #0ACEFA;
+  --color-captain: #FFA325;
+  --color-legend: #8048F7;
+  --color-legend-2: var(--color-legend);
+  --color-legend-3: var(--color-legend);
+  --color-legend-4: var(--color-legend);
+  --color-vip: #6AD035;
+
+  --color-copytext-background: #2F354B;
+  --color-copytext-button-background:  #383F58;
+
+  // header
+  --color-header-bg: var(--color-black);
+  --color-header-link: var(--color-icon);
+  --color-header-link-hover: var(--color-white);
+  --color-header-coin-widget: #1C1F30;
+  --color-header-coin-widget-hover: var(--color-background-mesg);
+  --color-profile-menu: var(--color-background-tabs);
+  --color-profile-menu-hover: #30354B;
+  --color-profile-menu-shadow: #151825;
+  --color-profile-percent-inactive: var(--color-icon);
+
+  //menu
+  --color-menu-bg: var(--color-black);
+  --color-menu-label: var(--color-title);
+  --color-menu-lang-switch: #313549;
+  // footer
+  --color-footer-desc-text: var(--color-button);
+  --color-footer-desc-link: var(--color-brand);
+
+  // button
+  --color-button-secondary-border: var(--color-line-1);
+
+  // fine-tuned font weights to reflect figma's rendering engine
+  --weight-400: 500;
+  --weight-500: 600;
+  --weight-600: 700;
+
+  // body
+  --color-background: #181B29;
+  --color-text: var(--color-white);
+
+  // chat
+  --color-chat-username: var(--color-icon);
+  --color-chat-sent: #424865;
+  --color-chat-input: #222638;
+  --color-chat-input-text: var(--color-icon);
+  --color-chat-background: var(--color-background-tabs);
+
+  //modal
+  --color-modal-overlay: rgba(0, 0, 0, 0.5);
+  --color-modal-bg: #292E42;
+  --color-modal-google-btn:#CF4040;
+  --color-modal-facebook-btn:#4C5ECC;
+  --color-modal-telegram-btn: #4899F7;
+  --color-modal-metamask-btn: #B4896E;
+
+  // inputs
+  --color-input-background: var(--color-line-2);
+  --color-select-border: #393E53;
+  --color-select-hover: #{lighten(#212536, 4%)};
+  --color-select-background: #2D3247;
+
+  // checkbox
+  --color-checkbox-background: var(--color-line-2);
+  --color-checkbox-hover: var(--color-line-1);
+  --color-checkbox-border: var(--color-line-1);
+  --color-checkbox-disabled: #161A28;
+
+  // tabs
+  --color-tabbed-content-background: var(--color-black);
+  --color-tabbed-content-tabs: var(--color-modal-bg);
+
+  // profile
+  --color-profile-head-background: var(--color-profile-menu-shadow);
+  --color-sports-row-desc-background: #252A3E;
+  --color-profile-win: var(--color-vip);
+  --color-profile-returned: var(--color-warning);
+  --color-profile-lost: var(--color-error);
+  --color-profile-unsettled: var(--color-info);
+  --color-profile-table-head-background: #292E42;
+  --color-progile-table-background: #222638;
+
+  &.light {
+    --color-background: var(--color-white);
+    --color-text: var(--color-black);
+  }
+}
+
+html,
+body,
+div[id="root"] {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  min-width: 375px;
+  border: 0;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-weight: var(--weight-500);
+  scroll-behavior: smooth;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  border: none;
+  border-top: 1px solid var(--color-line-1);
+  margin: 0;
+}

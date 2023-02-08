@@ -1,0 +1,25 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.out {
+  @include flexbox(center, center);
+  
+  & > * {
+    margin: 0 5px;
+  }
+
+  @media(max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    gap: 12px;
+
+    & > * {
+      width: 100%;
+      margin: 0;
+
+      button{
+        width: 100%;
+      }
+    }
+  }
+
+}

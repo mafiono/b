@@ -1,0 +1,115 @@
+.table {
+  //for padding and - margin
+  width: calc(100%);
+  border-collapse: collapse;
+  background-color: var(--color-progile-table-background);
+  border-collapse: separate;
+  padding:12px 0 20px 32px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  @media (max-width: 768px){
+    padding-left: 0px;
+}
+}
+
+.STable{
+  width: calc(100%);
+  border-collapse: collapse;
+
+  background-color: var(--color-progile-table-background);
+  // border-collapse: separate;
+  padding:12px 0 20px 32px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  text-align: center;
+}
+.thBody{
+  padding-bottom: 22px;
+}
+.head {
+}
+.tr{
+  // border-bottom: 1px solid #313549;
+
+  
+}
+.td{
+  text-align: left;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-button);
+  padding: 10px 0;
+  width: calc(100%/5);
+  @media (max-width: 768px){
+      div {
+        justify-content: center;
+      }
+  }
+  @media (min-width: 768px){
+    &:last-child{
+      padding-right:32px;
+      > div {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+}
+.tr:last-child{
+  border-bottom-style:hidden; 
+  text-align: right;
+}
+.th{
+  text-align: left;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-button);
+  padding:12px 0;
+  @media (max-width: 768px) {
+    text-align: center;
+    
+  }
+  @media (min-width: 768px){
+    &:last-child{
+      padding-right:32px;
+      text-align: right;
+    }
+  }
+}
+.tdSecondary{
+  text-align: left;
+  padding: 16px 0;
+
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-white);
+  border-bottom: 1px solid #313549;
+  padding-left: 32px;
+  width: calc(100%/4);
+}
+.thSecondary{
+  text-align: left;
+  padding: 16px 0;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-icon);
+  padding-left: 32px;
+}
+
+.headSecondary{
+  background: #1C1F2F;
+}
+.headingFootballer{
+  color:var(--color-white);
+}
+
+.colorBrand{
+  color:var(--color-brand);
+}
+.colorButton{
+  color:var(--color-button)
+}

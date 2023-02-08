@@ -1,0 +1,184 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.container {
+  @include flexbox(flex-start, space-between);
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.label {
+  font-family: Poppins;
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--color-icon);
+  margin: 0 0 19px 0;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
+}
+
+.left {
+  width: 50%;
+  margin-right: 48px;
+  flex: 5 6 40%;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.balance {
+  @include flexbox(center, space-between);
+
+  margin: 24px 0;
+}
+
+.balance_label {
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-icon);
+}
+.balance_value {
+    font-size: 14px;
+}
+
+.notice {
+  @include flexbox(center, flex-start);
+
+  margin-bottom: 16px;
+}
+
+.notice_icon {
+  color: var(--color-icon);
+  margin-right: 12px;
+}
+
+.notice_item {
+  margin-bottom: 8px;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-icon);
+}
+
+.notice_link {
+  color: var(--color-brand);
+}
+
+.right {
+  background: var(--color-background-tabs);
+  border-radius: 8px;
+  padding: 24px;
+  flex: 6 4 60%;
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.mobile_button{
+  @media (max-width: 768px) {
+    padding: 0;
+    width: 75px;
+  }
+}
+
+.network {
+  @include flexbox(center, space-between);
+
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-icon);
+  margin-bottom: 16px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.qr_out {
+  @include flexbox(flex-start, space-between);
+  margin: 17px 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.address {
+  margin-right: 26px;
+  width: 100%;
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.address_label {
+  font-family: Poppins;
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--color-icon);
+  margin-bottom: 16px;
+}
+
+.qr {
+  background: #222638;
+  border-radius: 8px;
+  padding: 21px;
+  @media (max-width: 768px) {
+    width: 265px;
+    padding: 21px 0;
+    @include flexbox(center, center)
+  }
+}
+
+.send_label {
+  font-family: Poppins;
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-icon);
+  margin: 16px 0 8px 0;
+}
+
+.send_info {
+  @include flexbox(center, space-between);
+
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: #696E87;
+
+  p {
+    margin-right: 16px;
+  }
+}
+
+.tabs {
+  @include flexbox(center, flex-start);
+  margin: 0 -8px;
+
+  & > * {
+    margin: 8px;
+  }
+
+  margin-bottom: 24px;
+  @media (max-width: 768px) {
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+}
+
+.description {
+  &:not(:last-child){
+    margin-bottom: 8px;
+  }
+}
+.white_color {
+  color: var(--color-white)
+}

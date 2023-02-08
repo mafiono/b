@@ -1,0 +1,30 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.form {
+  display: grid;
+
+  grid-row-gap: 12px;
+  grid-auto-flow: row;
+  width: 100%;
+}
+
+.total {
+  padding: 22px 0;
+}
+
+.private {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.background {
+  background-color: var(--color-background-mesg);
+}
+
+.btn {
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+}

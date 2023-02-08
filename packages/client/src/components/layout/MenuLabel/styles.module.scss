@@ -1,0 +1,20 @@
+@import "~@betnomi/libs/assets/styles/_variables";
+@import "~@betnomi/libs/assets/styles/_mixins";
+
+.label {
+  @include flexbox(center, flex-start);
+
+  color: var(--color-menu-label);
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 21px;
+  height: 44px;
+  width: 100%;
+  border-top: 1px solid var(--color-line-1);
+  margin-top: 15px;
+
+  @media(min-width: 768px)  {
+    display: none;
+  }
+}
+

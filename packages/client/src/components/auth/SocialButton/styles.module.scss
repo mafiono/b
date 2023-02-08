@@ -1,0 +1,41 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+@import "~@betnomi/libs/assets/styles/_variables";
+
+.button {
+  @include flexbox(center, center);
+  
+  width: 84px;
+  height: 44px;
+  border-radius: 8px;
+  transition: all $transition-time;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.google {
+  background-color: var(--color-modal-google-btn);
+}
+
+.facebook {
+  background-color: var(--color-modal-facebook-btn);
+}
+
+.telegram {
+  background-color: var(--color-modal-telegram-btn);
+}
+
+.metamask {
+  background-color: var(--color-modal-metamask-btn);
+}
+
+.icon_bg {
+  color: var(--color-white);
+}

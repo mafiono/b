@@ -1,0 +1,30 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.form {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 20px;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.terms {
+  margin-bottom: 24px;
+}
+
+.terms_checkbox {
+  @include flexbox(flex-start, space-between);
+}
+
+.terms_text {
+  max-width: 329px;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-button);
+  text-align: left;
+}
+
+.terms_link {
+  color: var(--color-brand);
+}

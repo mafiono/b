@@ -1,0 +1,16 @@
+.link {
+	display: block;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: Inter;
+	transition: all 0.3s;
+	color: var(--color-header-link);
+
+	&.active{
+		color: var(--color-header-link-hover);
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+}

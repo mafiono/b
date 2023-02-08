@@ -1,0 +1,58 @@
+@import "../../../assets/styles/mixins";
+
+.widget {
+  @include flexbox(center, stretch);
+  flex-direction: row;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+
+  * {
+    min-width: 0;
+  }
+}
+
+.info {
+  @include flexbox(flex-start, center);
+  flex-direction: column;
+  padding-left: 11px;
+}
+
+.name {
+  @include flexbox(center, center);
+
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 5px;
+
+  span {
+    @include ellipsis(128px);
+  }
+
+  img {
+    padding-left: 8px;
+  }
+}
+
+.floating {
+  [data-popper-arrow] {
+    svg {
+      fill: var(--color-profile-menu);
+    }
+  }
+
+  &.hidden {
+    @include hidden();
+  }
+
+  @media(max-width: 768px) {
+    width: calc(100% - 30px);
+    left: -5px !important;
+  }
+
+  @media(min-width: 768px) {
+    left: -38px !important;
+  }
+}

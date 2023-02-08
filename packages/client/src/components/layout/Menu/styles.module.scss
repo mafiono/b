@@ -1,0 +1,136 @@
+@import "~@betnomi/libs/assets/styles/_variables";
+@import "~@betnomi/libs/assets/styles/_mixins";
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @media(max-width: 768px){
+    background-color: var(--color-chat-background);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+  }
+}
+
+.nav{
+  height: 100%;
+}
+
+.scrollable {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px 15px 0 15px;
+  list-style: none;
+  margin: 0;
+
+  .active & {
+    padding: 15px 29px 0 29px;
+  }
+
+  @media(max-width: 768px) {
+    overflow-y: unset;
+    overflow-x: unset;
+    .active & {
+      padding: 0 15px;
+    }
+  }
+}
+
+.linear {
+  top: -50px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  background-image: linear-gradient(transparent, var(--color-menu-bg));
+}
+
+.buttons {
+  position: relative;
+  margin-top: auto;
+  padding: 0 15px;
+  flex-shrink: 0;
+
+  .active & {
+    width: $menu_width;
+    padding: 0 32px;
+  }
+
+  @media(max-width: 768px) {
+    overflow: hidden;
+    margin-top: 24px;
+    background: url("../../../../../libs/assets/img/left_clover.png")no-repeat left bottom/15%, url("../../../../../libs/assets/img/right_clover.png")no-repeat right bottom/15%;
+
+    .active & {
+      padding: 0 18px;
+      width: 100%;
+    }
+  }
+}
+
+.lang_out {
+  min-width: max-content;
+}
+
+.theme_out {
+  margin-top: 22px;
+  margin-bottom: 25px;
+
+  @media(max-width: 768px) {
+    margin-top: 16px;
+  }
+}
+
+.menuHead{
+  padding: 25px 20px;
+  @include flexbox(center, space-between);
+
+  i:before{
+    margin: 0;
+    color: #696E87;
+    cursor: pointer;
+  }
+}
+
+.links{
+  color: var(--color-button);
+  font-size: 14px;
+  @include flexbox(center, flex-start);
+  flex-wrap: wrap;
+  margin: 0 15px 0 15px;
+  line-height: 1.35;
+
+  a{
+    @include flexbox(center, flex-start);
+    flex-basis: 50%;
+    margin-bottom: 15px;
+  }
+
+  i{
+    margin-right: 15px;
+  }
+
+  @media(max-width: 768px){
+    background-color: var(--color-chat-background);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 15px 15px 0 15px;
+    margin: 0;
+  }
+}
+
+.Imgicon{
+  margin: 0 19.5px 0 4.5px;
+}
+
+.menuContent{
+  height: 100%;
+  @media(max-width: 768px){
+    background-color: var(--color-background);
+    padding: 15px;
+    height: auto;
+    padding-bottom: 86px;
+  }
+}

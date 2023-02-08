@@ -1,0 +1,63 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.message {
+  @include flexbox(stretch, stretch);
+  flex-direction: row;
+  min-width: 0;
+
+  * {
+    min-width: 0;
+  }
+}
+
+.avatar {
+  @include flexbox(center, flex-start);
+  flex-direction: column;
+  height: 100%;
+  margin-right: 16px;
+  flex: 0 0 44px;
+
+  & > *:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}
+
+.username {
+  @include flexbox(center, stretch);
+
+  flex-direction: row;
+  color: var(--color-chat-username);
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 16px;
+
+  &_text {
+    flex: 1;
+    white-space: nowrap;
+    padding-right: 10px;
+
+    @include ellipsis(100%);
+  }
+
+  &_time {
+    flex: 0 0 auto;
+    font-weight: var(--weight-400);
+  }
+}
+
+.text {
+  background-color: var(--color-background-mesg);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: var(--weight-400);
+  width: 100%;
+  white-space: pre-line;
+}

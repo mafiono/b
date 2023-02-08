@@ -1,0 +1,15 @@
+@import "../../assets/styles/mixins";
+
+.level {
+  @include flexbox(center, center);
+
+  height: 20px;
+  border-radius: 4px;
+  color: var(--color-white);
+  font-size: 8px;
+  font-weight: var(--weight-600);
+  line-height: 12px;
+  letter-spacing: 0;
+  display: inline-flex;
+  padding: 6px 8px 4px;
+}

@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src"
+  },
+  "include": ["src/**/*", "../libs/components/Table", "../libs/components/homepage/GamesProvider"]
+}

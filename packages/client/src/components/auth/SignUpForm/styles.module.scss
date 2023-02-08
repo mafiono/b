@@ -1,0 +1,58 @@
+@import "~@betnomi/libs/assets/styles/_variables";
+@import "~@betnomi/libs/assets/styles/_mixins";
+
+.user {
+  margin-bottom: 12px;
+}
+
+.email {
+  margin-bottom: 12px;
+}
+
+.password {
+  margin-bottom: 12px;
+}
+
+.referral {
+  margin-bottom: 24px;
+  transition: all $transition-time;
+}
+
+.restore_button {
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-button);
+  margin-bottom: 33px;
+}
+
+.terms {
+  margin-bottom: 16px;
+}
+
+.terms_checkbox {
+  @include flexbox(flex-start, space-between);
+}
+
+.terms_text {
+  max-width: 329px;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-button);
+  text-align: left;
+}
+
+.terms_link {
+  color: var(--color-brand) !important;
+  display: inline;
+}
+
+.submit_button {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.background {
+  background-color: var(--color-input-background);
+}

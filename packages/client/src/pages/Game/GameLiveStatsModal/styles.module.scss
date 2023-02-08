@@ -1,0 +1,172 @@
+@import "~@betnomi/libs/assets/styles/variables";
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.headIcon{
+  @include flexbox(center, center);
+  font-weight: 400;
+  img{
+    margin-right: 10px;
+  }
+}
+.modalContent{
+  width: 100%;
+}
+
+.label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: var(--weight-500);
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--color-icon);
+  margin-bottom: 4px;
+}
+
+.select {
+  background: var(--color-background-tabs);
+  border-radius: 4px;
+}
+
+.selectWrap{
+  @include flexbox(center, center);
+  margin-bottom: 16px;
+
+  & > button:first-child > div{
+    background-color: var(--color-line-2) !important;
+  }
+}
+
+.button{
+  padding: 0;
+  min-width: 44px;
+  height: 44px;
+  margin-left: 16px;
+}
+
+
+.bets{
+  @include flexbox(center, center);
+  border: 1px solid var(--color-line-1);
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 16px;
+
+  & > div{
+    padding: 16px 24px;
+    flex-grow: 1;
+
+    &:first-child{
+      border-right: 1px dashed #313549;
+    }
+  }
+
+  .profit{
+    color: var(--color-error);
+  }
+
+  .wagered, .profit{
+    @include flexbox(center, space-between);
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+.winsWrap{
+  @include flexbox(center, space-between);
+  margin-bottom: 16px;
+
+   & > div {
+     flex-basis: calc(50% - 8px);
+     padding: 16px 24px;
+     background-color: var(--color-background-mesg);
+     border-radius: 8px;
+     @include flexbox(center, space-between);
+   }
+
+  .wins{
+    color: var(--color-brand);
+    font-weight: 500;
+  }
+  .lose{
+    color: var(--color-error);
+    font-weight: 500;
+  }
+}
+
+.progressbarWrap{
+  @include flexbox(center, space-between);
+  margin-bottom: 12px;
+
+  p{
+    white-space: nowrap;
+    margin-right: 18px;
+  }
+}
+
+.progressbar {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  background: #222638;
+
+  & > span {
+    display: block;
+    height: 100%;
+    background-color: var(--color-brand);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+}
+
+.wagerContest{
+  padding: 24px;
+  background-color: var(--color-background-mesg);
+  border-radius: 8px;
+
+  .label{
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--color-line-1);
+
+    i{
+      margin-left: 8px;
+    }
+  }
+
+  .bets{
+    @include flexbox(center, center);
+    border: none;
+    color: #fff;
+    margin-bottom: 16px;
+
+    .label{
+      margin-bottom: 4px;
+      padding-bottom: 0;
+      border: none;
+    }
+
+    .profit{
+      color: #fff;
+    }
+
+    & > div{
+      padding: 0;
+      flex-grow: 1;
+
+      &:first-child{
+        border-right: none;
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+.chartWrap{
+  height: 100px;
+  border-bottom: 1px solid var(--color-line-1);
+  margin-bottom: 16px;
+}

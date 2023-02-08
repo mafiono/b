@@ -1,0 +1,11 @@
+.telegram { 
+  position: relative;
+
+  iframe {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    // important because telegram widget has inline style width 173px which we can't change
+    width: 84px !important;
+  }
+}

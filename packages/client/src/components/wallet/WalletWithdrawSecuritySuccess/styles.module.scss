@@ -1,0 +1,78 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.form {
+  @include flexbox(flex-start, flex-start);
+  flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+}
+
+.summary {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.request_code {
+  color: var(--color-brand);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.label {
+  @include flexbox(center, center);
+  height: 48px;
+  color: var(--color-button);
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.bold {
+  color: var(--color-text);
+}
+
+.caption {
+  color: var(--color-button);
+  font-weight: var(--weight-500);
+  font-size: 14px;
+  line-height: 18px;
+  margin: 16px 0;
+}
+
+.submit {
+  margin-top: 16px;
+}
+
+.content {
+  @include flexbox(center, center);
+  flex-direction: column;
+  margin-top: 72px;
+  width: 100%;
+  margin-bottom: 52px - 16px;
+}
+
+.title {
+  margin-top: 48px;
+  font-weight: var(--weight-600);
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.subtitle {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-icon);
+}
+
+.amount {
+  margin-top: 12px;
+  font-weight: var(--weight-600);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.header {
+  font-size: 18px;
+  line-height: 24px;
+}

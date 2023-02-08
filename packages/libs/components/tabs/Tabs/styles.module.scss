@@ -1,0 +1,66 @@
+@import "../../../assets/styles/mixins";
+
+.tabs {
+  @include flexbox(stretch, flex-start);
+  flex-direction: row;
+  border-bottom: 1px solid var(--color-line-1);
+  @media (max-width: 425px){
+   justify-content: space-between;
+  }
+
+  .tab &:last-child {
+    border-right:none;
+  }
+
+  &.mainTabs{
+    .tab {
+      border-right: 0;
+      margin: 0 24px;
+      padding: 0;
+      padding-bottom: 22px;
+
+      &:first-child{
+        margin-left: 0;
+      }
+      
+     
+
+      @media (max-width: 425px){
+        margin: 0 15px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.tab {
+  @include flexbox(center, center);
+
+  color: inherit;
+  min-height: 48px;
+  padding: 19px 32px;
+  border-right: 1px solid var(--color-line-1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: 768px){
+    flex: 1;
+    &:last-child{
+      border-right: none;
+    }
+  }
+  @media (max-width: 425px){
+    padding: 0 15px;
+    justify-content: none;
+    width: 100%;
+    &:last-child{
+      border-right: none;
+    }
+  }
+
+  &.active {
+    border-bottom: 2px solid var(--color-brand);
+  }
+ 
+}

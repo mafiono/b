@@ -1,0 +1,31 @@
+@import "~@betnomi/libs/assets/styles/variables";
+
+.toggle {
+  display: inline-flex;
+  position: relative;
+  background-color: var(--color-input-background);
+  transition: all $transition-time;
+
+  &.active {
+    background-color: var(--color-brand);
+  }
+
+  &.disabled {
+    background-color: var(--color-input-background);
+  }
+}
+
+.dot {
+  position: absolute;
+  background-color: var(--color-button);
+  border-radius: 100%;
+  transition: all $transition-time;
+
+  .active & {
+    background-color: var(--color-white);
+  }
+
+  .disabled & {
+    background-color: var(--color-checkbox-disabled);
+  }
+}

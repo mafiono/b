@@ -1,0 +1,36 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.layout {
+  min-width: 1280px;
+  @include flexbox(flex-start, flex-start);
+}
+
+.contentWrap {
+  @include flexbox(flex-start, flex-start);
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  height: 100vh;
+  padding: 0 45px;
+}
+
+.content {
+  width: 100%;
+  max-height: calc(100vh - #{$headerHeight + $contentMarginTop});
+
+  margin-top: 24px;
+  padding-right: 5px;
+  padding-bottom: 45px;
+
+  flex: 1 0 auto;
+  overflow-y: auto;
+
+  & > * {
+    margin-bottom: $cellspacing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

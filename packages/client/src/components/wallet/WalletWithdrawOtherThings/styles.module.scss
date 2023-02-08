@@ -1,0 +1,17 @@
+@import "~@betnomi/libs/assets/styles/mixins";
+
+.list {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.row {
+  @include flexbox(center, center);
+  flex-direction: row;
+  height: 32px;
+}
+
+.label {
+  flex: 1;
+  color: var(--color-title);
+}
