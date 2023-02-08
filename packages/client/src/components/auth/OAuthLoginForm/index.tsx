@@ -5,7 +5,7 @@ import {
 } from '@betnomi/libs/components';
 import { TextInput } from '@betnomi/libs/components/TextInput';
 import { useTranslation } from '../../../i18n';
-import { FontIcon, FontIconName } from '../../../../../libs/components/FontIcon';
+import { FontIcon, FontIconName } from '@betnomi/libs/components/FontIcon';
 import styles from './styles.module.scss';
 
 type InputName = 'login' | 'terms';

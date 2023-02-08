@@ -74,95 +74,95 @@ export const MenuGroup:React.FC<MenuGroupOptions> = ({
                   <span className={cx(styles.text,  { [styles.active]: long }, classNameLabel)}>
                 {title}
               </span>
-                  {!long && (
-                      <span className={styles.short_label}>
+                      {!long && (
+                          <span className={styles.short_label}>
                 {shortLabel}
               </span>
-                  )}
-                </div>
-                {showArrow && (
-                    <div className={styles.arrow}>
-                      <FontIcon
-                          name={FontIconName.IconArrowBottom}
-                          size={12}
-                      />
+                      )}
                     </div>
-                )}
-              </button>
-
-              {isMobile && (
-              <ul
-                  className={cx(styles.items, { [styles.hidden]: !focused })}
-              >
-                {items.map((item) => {
-                  if (item.type === MenuItemType.Button) {
-                    return (
-                        <button
-                            key={item.options.label}
-                            onMouseDown={item.options.onClick}
-                            className={styles.button_lang}
-                        >
-                          {item.options.label}
-                        </button>
-                    );
-                  }
-                  return (
-                      <MenuLink
-                          long
-                          key={item.options.label}
-                          to={item.options.to}
-                          label={item.options.label}
-                      />
-                  );
-                })}
-              </ul>
-              )}
-            </>
-
-        )}
-      </Reference>
-
-      {!isMobile && (
-          <Popper placement="right-start" modifiers={modifiers}>
-            {({
-                ref, style, update,
-              }) => (
-                <PopperUpdater
-                    update={update}
-                    deps={deps}
-                    delay={300}
-                >
-                  <ul
-                      className={cx(styles.items, { [styles.hidden]: !focused })}
-                      ref={ref}
-                      style={style}
-                  >
-                    {items.map((item) => {
-                      if (item.type === MenuItemType.Button) {
-                        return (
-                            <button
-                                key={item.options.label}
-                                onMouseDown={item.options.onClick}
-                                className={styles.button_lang}
-                            >
-                              {item.options.label}
-                            </button>
-                        );
-                      }
-                      return (
-                          <MenuLink
-                              long
-                              key={item.options.label}
-                              to={item.options.to}
-                              label={item.options.label}
+                    {showArrow && (
+                        <div className={styles.arrow}>
+                          <FontIcon
+                              name={FontIconName.IconArrowBottom}
+                              size={12}
                           />
-                      );
-                    })}
-                  </ul>
-                </PopperUpdater>
+                        </div>
+                    )}
+                  </button>
+
+                  {isMobile && (
+                      <ul
+                          className={cx(styles.items, {[styles.hidden]: !focused})}
+                      >
+                        {items.map((item) => {
+                          if (item.type === MenuItemType.Button) {
+                            return (
+                                <button
+                                    key={item.options.label}
+                                    onMouseDown={item.options.onClick}
+                                    className={styles.button_lang}
+                                >
+                                  {item.options.label}
+                                </button>
+                            );
+                          }
+                          return (
+                              <MenuLink
+                                  long
+                                  key={item.options.label}
+                                  to={item.options.to}
+                                  label={item.options.label}
+                              />
+                          );
+                        })}
+                      </ul>
+                  )}
+                </>
+
             )}
-          </Popper>
-      )}
-    </Manager>
-  );
+          </Reference>
+
+          {!isMobile && (
+              <Popper placement="right-start" modifiers={modifiers}>
+                {({
+                    ref, style, update,
+                  }) => (
+                    <PopperUpdater
+                        update={update}
+                        deps={deps}
+                        delay={300}
+                    >
+                      <ul
+                          className={cx(styles.items, {[styles.hidden]: !focused})}
+                          ref={ref}
+                          style={style}
+                      >
+                        {items.map((item) => {
+                          if (item.type === MenuItemType.Button) {
+                            return (
+                                <button
+                                    key={item.options.label}
+                                    onMouseDown={item.options.onClick}
+                                    className={styles.button_lang}
+                                >
+                                  {item.options.label}
+                                </button>
+                            );
+                          }
+                          return (
+                              <MenuLink
+                                  long
+                                  key={item.options.label}
+                                  to={item.options.to}
+                                  label={item.options.label}
+                              />
+                          );
+                        })}
+                      </ul>
+                    </PopperUpdater>
+                )}
+              </Popper>
+          )}
+        </Manager>
+    );
 };

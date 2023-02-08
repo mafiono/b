@@ -1,4 +1,9 @@
-const SelectFooball = (value) =>{
+import {FontIcon, FontIconName} from "../../FontIcon";
+import {Column} from "react-table";
+import React from "react";
+import styles from "module"
+
+const SelectFooball = (value: any) =>{
   switch(value){
     case "Football": return `${FontIconName.Football}`;
     case "Cricket": return  `${FontIconName.Cricket}`;
@@ -9,11 +14,14 @@ const SelectFooball = (value) =>{
   }
 }
 
+interface Data {
+}
+
 const columns: Column<Data>[] = [
   {
     Header: "Game",
     accessor: "name",
-    Cell:(game)=>(
+    Cell:(game: { value: React.ReactNode; })=>(
       <div>
         <FontIcon name={SelectFooball(game.value)} size={12} />
         <h3 className={styles.headingFootballer}>{game.value}</h3>

@@ -29,6 +29,6 @@ storiesOf('Basic', module).add('UserWidget', () => {
       image={avatar}
       confirmed={confirmed}
       onLogout={onLogout}
-    />
+     isMobile/>
   );
 });

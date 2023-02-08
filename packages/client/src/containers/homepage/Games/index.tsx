@@ -16,7 +16,6 @@ import { selectAuthUI } from '../../../store/auth/selectors';
 import { bannerHomeOverlay } from '@betnomi/client/src/components/common/BannerOverlays';
 import GameProvider from '@betnomi/libs/components/homepage/GamesProvider'
 import {Promotions} from '@betnomi/libs/components/Promotions';
-import Ellipsis1 from '@betnomi/libs/assets/img/promotions/Ellipse1.png';
 import Union from '@betnomi/libs/assets/img/promotions/Union.png';
 import SummerDots from '@betnomi/libs/assets/img/promotions/background2.png';
 import Ellips from '@betnomi/libs/assets/img/promotions/Ellipse1.png';
