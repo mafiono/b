@@ -15,7 +15,7 @@ import { ProfileBonuses } from '../../containers/profile/bonuses/ProfileBonuses'
 import { useTabOrder } from '../../hooks/useTabOrder';
 import { Routes } from '../../constants/routes';
 import { Authorized } from '../../containers/app/Authorized';
-import { TabsSelect } from '../../../../libs/components/TabsSelect';
+import { TabsSelect } from '@betnomi/libs/components/TabsSelect';
 
 interface Props {}
 
