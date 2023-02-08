@@ -1,0 +1,4 @@
+# Project exclude paths
+/node_modules/
+/packages/client/node_modules/
+/packages/libs/node_modules/
