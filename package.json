@@ -7,7 +7,7 @@
   ],
   "resolutions": {
     "elliptic": "6.5.4",
-    "immer": "8.0.2",
+    "immer": "9.0.6",
     "object-path": "0.11.5",
     "prismjs": "1.23.0",
     "ini": "2.0.0"
