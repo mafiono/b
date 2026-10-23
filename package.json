@@ -58,7 +58,7 @@
     "babel-loader": "8.1.0",
     "css-loader": "5.2.4",
     "fontello-cli": "0.6.2",
-    "husky": "4.3.0",
+    "husky": "4.3.8",
     "lerna": "4.0.0",
     "lint-staged": "10.4.0",
     "node-sass": "5.0.0",
