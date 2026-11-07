@@ -34,7 +34,7 @@
     "date-fns": "2.0.1",
     "device-uuid": "^1.0.4",
     "formik": "2.2.6",
-    "history": "4.10.0",
+    "history": "4.10.1",
     "lightweight-charts": "3.3.0",
     "moment": "2.29.1",
     "ramda": "0.27.1",
@@ -64,7 +64,7 @@
   "devDependencies": {
     "@types/classnames": "2.2.10",
     "@types/device-uuid": "^1.0.0",
-    "@types/history": "4.7.8",
+    "@types/history": "4.7.11",
     "@types/node": "12.0.0",
     "@types/ramda": "0.27.1",
     "@types/react": "16.9.0",
